@@ -19,7 +19,6 @@ import MainBanner from '../../components/MainBanner';
 import '../../assets/css/style.css';
 import '../../assets/css/set1.css';
 
-/* eslint-disable react/prefer-stateless-function */
 export class HomePage extends React.PureComponent {
   componentDidMount() {
     if (this.props.username && this.props.username.trim().length > 0) {
@@ -29,17 +28,17 @@ export class HomePage extends React.PureComponent {
 
   render() {
     const { loading, error, repos } = this.props;
-    const reposListProps = {
-      loading,
-      error,
-      repos,
-    };
+    // const reposListProps = {
+    //   loading,
+    //   error,
+    //   repos,
+    // };
 
     return (
       <Fragment>
         <Menu />
         <MainBanner />
-        <SelectNewspaper />
+        <SelectNewspaper history={this.props.history}/>
         <FeaturedNewspaper />
         <Categories history={this.props.history}/>
         <Banner />

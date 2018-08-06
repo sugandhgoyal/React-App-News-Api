@@ -1,6 +1,6 @@
 import { repoAction } from "../index";
 
-import { FETCH_PUBLIC_REPOS, FETCH_NEWS_LIST, FETCH_SEARCH_NEWS } from '../../constants/api';
+import { FETCH_PUBLIC_REPOS, FETCH_NEWS_LIST, FETCH_SEARCH_NEWS, FETCH_NEWSPAPER } from '../../constants/api';
 
 import { getCallApi } from '../../utils/utils';
 
@@ -44,6 +44,23 @@ export const getNewsList = (tag) => {
   return (dispatch) => {
     dispatch(repoAction.load_repo_data());
     return getCallApi(FETCH_NEWS_LIST(tag)).then((data) => {
+      dispatch(repoAction.load_repo_data_success(data));
+      return Promise.resolve(data);
+    }).catch((error) => {
+      dispatch(repoAction.load_repo_data_error(error));
+      return Promise.reject(error);
+    })
+  }
+}
+/**
+ *
+ * @param {*} num
+ */
+export const getNewspaper = (tag) => {
+  return (dispatch) => {
+    dispatch(repoAction.load_repo_data());
+    return getCallApi(FETCH_NEWSPAPER(tag)).then((data) => {
+      console.log(FETCH_NEWSPAPER(tag));
       dispatch(repoAction.load_repo_data_success(data));
       return Promise.resolve(data);
     }).catch((error) => {

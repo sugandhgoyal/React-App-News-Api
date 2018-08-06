@@ -18,3 +18,6 @@ export const FETCH_NEWS_LIST = (tag) => {
 export const FETCH_SEARCH_NEWS = (searchString) => {
     return `https://newsapi.org/v2/everything?q=${searchString}&apiKey=3ea6ffb936c14da986623e3228c3a60f`;
 }
+export const FETCH_NEWSPAPER = (searchString) => {
+    return `https://newsapi.org/v2/top-headlines?sources=${searchString}&apiKey=3ea6ffb936c14da986623e3228c3a60f`;
+}
