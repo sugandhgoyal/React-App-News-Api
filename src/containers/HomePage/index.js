@@ -36,7 +36,7 @@ export class HomePage extends React.PureComponent {
 
     return (
       <Fragment>
-        <Menu />
+        <Menu history={this.props.history}/>
         <MainBanner />
         <SelectNewspaper history={this.props.history}/>
         <FeaturedNewspaper />

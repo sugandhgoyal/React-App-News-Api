@@ -114,7 +114,9 @@ Author: Surjith S M
   }
   
   .navbar-brand {
+    color: white !important;
     font-size: 31px;
+    cursor: pointer;
   }
   
   .navbar-light .navbar-brand {

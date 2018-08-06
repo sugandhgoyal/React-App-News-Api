@@ -10,7 +10,7 @@ class NewsLists extends React.Component {
     this.props.history.push(path);
   }
   changeUrl = (tag) => {
-    this.props.history.push(tag);
+    window.open(tag);
   }
   componentDidMount = () => {
     let tag = this.props.location.pathname.split('/')[2];
