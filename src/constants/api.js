@@ -21,3 +21,4 @@ export const FETCH_SEARCH_NEWS = (searchString) => {
 export const FETCH_NEWSPAPER = (searchString) => {
     return `https://newsapi.org/v2/everything?sources=${searchString}&apiKey=3ea6ffb936c14da986623e3228c3a60f`;
 }
+export const FETCH_POPULAR_NEWSPAPER = `https://newsapi.org/v2/top-headlines?country=in&apiKey=3ea6ffb936c14da986623e3228c3a60f`;

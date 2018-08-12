@@ -1,10 +1,14 @@
 import React from 'react';
 import '../../assets/css/set1.css';
+import '../../assets/css/icons.css';
 
 class Menu extends React.Component {
   showNewsPage = (tag) => {
     const path = `${tag}`;
     this.props.history.push(path);
+  }
+  changeUrl = (tag) => {
+    window.open(tag);
   }
   render() {
     return (
@@ -22,43 +26,17 @@ class Menu extends React.Component {
                   <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                       <li className="nav-item dropdown">
-                        <a className="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Explore
-                                          <span className="icon-arrow-down"></span>
+                        <a className="nav-link" onClick={() => this.changeUrl('/')} id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Home
                         </a>
-                        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a className="dropdown-item" href="#">Action</a>
-                          <a className="dropdown-item" href="#">Another action</a>
-                          <a className="dropdown-item" href="#">Something else here</a>
-                        </div>
                       </li>
-                      <li className="nav-item dropdown">
-                        <a className="nav-link" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Listing
-                                          <span className="icon-arrow-down"></span>
-                        </a>
-                        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a className="dropdown-item" href="#">Newspapers</a>
-                          <a className="dropdown-item" href="#">Premium</a>
-                          <a className="dropdown-item" href="#">Something else here</a>
-                        </div>
-                      </li>
-                      <li className="nav-item dropdown">
+                      {/* <li className="nav-item dropdown">
                         <a className="nav-link" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Pages
-                                          <span className="icon-arrow-down"></span>
+                          Contact Us
                         </a>
-                        <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a className="dropdown-item" href="#">Action</a>
-                          <a className="dropdown-item" href="#">Another action</a>
-                          <a className="dropdown-item" href="#">Something else here</a>
-                        </div>
-                      </li>
-                      <li className="nav-item active">
-                        <a className="nav-link" href="#">About</a>
-                      </li>
+                      </li> */}
                       <li className="nav-item">
-                        <a className="nav-link" href="#">Blog</a>
+                        <a className="nav-link" href="#">Login</a>
                       </li>
                     </ul>
                   </div>

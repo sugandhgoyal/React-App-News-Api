@@ -16,17 +16,17 @@ function Footer() {
               <ul>
                 <li>
                   <a href="#">
-                    <span className="ti-facebook"></span>
+                    <i class="fa fa-facebook"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <span className="ti-twitter-alt"></span>
+                    <i class="fa fa-twitter-square"></i>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <span className="ti-instagram"></span>
+                    <i class="fa fa-instagram"></i>
                   </a>
                 </li>
               </ul>

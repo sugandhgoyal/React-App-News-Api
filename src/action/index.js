@@ -5,5 +5,5 @@ export { _repoAction as repoAction };
 export { loadRepoDataApi, getStarsApi, getLanguagesApi, searchApiCall, filterApiFunction } from './ayncAction.js/repo.async.action';
 
 export { _homeAction as homeAction };
-export { getNewsList, searchNewsApiCall, getNewspaper } from './ayncAction.js/home.async.action';
+export { getNewsList, searchNewsApiCall, getPopularNewspaper,getNewspaper } from './ayncAction.js/home.async.action';
 

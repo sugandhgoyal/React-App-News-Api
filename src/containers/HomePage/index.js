@@ -27,19 +27,12 @@ export class HomePage extends React.PureComponent {
   }
 
   render() {
-    const { loading, error, repos } = this.props;
-    // const reposListProps = {
-    //   loading,
-    //   error,
-    //   repos,
-    // };
-
     return (
       <Fragment>
         <Menu history={this.props.history}/>
-        <MainBanner />
+        <MainBanner history={this.props.history}/>
         <SelectNewspaper history={this.props.history}/>
-        <FeaturedNewspaper />
+        <FeaturedNewspaper history={this.props.history}/>
         <Categories history={this.props.history}/>
         <Banner />
         <Footer />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { searchNewsApiCall } from "../../action/index";
 import { connect } from 'react-redux';
+import '../../assets/css/searchBox.css';
 
 class MainBanner extends React.Component {
   constructor(props) {
@@ -29,7 +30,10 @@ class MainBanner extends React.Component {
       this.props.dispatch(searchNewsApiCall(searchedString));
     }
   }
-
+  showNewsPage = (tag) => {
+    const path = `/popular`;
+    this.props.history.push(path);
+  }
   render() {
     return (
       <section className="slider d-flex align-items-center">
@@ -63,9 +67,7 @@ class MainBanner extends React.Component {
                       </div>
                     </form>
                     <div className="slider-link">
-                      <a href="#">Browse Popular</a>
-                      <span>or</span>
-                      <a href="#">Recently Addred</a>
+                      <a onClick={() => this.showNewsPage()}>Browse Popular</a>
                     </div>
                   </div>
                 </div>
